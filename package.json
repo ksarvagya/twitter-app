@@ -1,0 +1,33 @@
+{
+  "name": "twitter-app",
+  "description": "Twitter integrated app",
+  "version": "0.0.0",
+  "author": "sarvagya",
+  "contributors": [
+    {
+      "name": "sarvagya"
+    }
+  ],
+  "private": true,
+  "main": "./src/main/server.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jasmine": "^0.9.0",
+    "grunt-template-jasmine-istanbul": "^0.3.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "errorhandler": "^1.4.1",
+    "express": "^4.13.1",
+    "express-session": "^1.11.3",
+    "hogan-middleware": "0.0.1",
+    "less-middleware": "^2.0.1",
+    "morgan": "^1.6.1",
+    "passport": "^0.2.2",
+    "passport-twitter": "^1.0.3",
+    "request": "^2.60.0"
+  },
+  "scripts": {
+    "start": "node ./"
+  }
+}

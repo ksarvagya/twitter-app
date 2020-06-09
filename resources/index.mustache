@@ -1,0 +1,42 @@
+<!doctype html>
+<html data-ng-app="twitter">
+<head>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body data-ng-controller="app">
+    <section data-ng-if="loggedIn">
+        <form data-update-status>
+            <textarea maxlength="139" data-ng-model="status"></textarea>
+            <button data-ng-click="send()">Tweet</button>
+            <button data-ng-click="refreshTimeline()">Refresh Timeline</button>
+
+            <em data-ng-if="refreshing">
+                updating
+            </em>
+        </form>
+
+        <ul class="timeline">
+            <li data-ng-repeat="tweet in tweets" data-tweet-content class="tweet">
+                <span class="" data-twitter-profile-picture></span>
+                <span class="tweet-heading">
+                    <a data-twitter-profile-link data-ng-bind="tweet | screenNameFilter"></a>
+                    <em class="tweet-created-at" data-ng-bind="tweet.created_at | recencyFilter"></em>
+                </span>
+                <span class="tweet-content" data-ng-bind-html="content"></span>
+            </li>
+        </ul>
+    </section>
+
+    <div data-ng-if="!loggedIn">
+        <a class="log-in" href="/auth/twitter">Sign In With Twitter</a>
+    </div>
+
+    <script src="js/lib/moment.min.js"></script>
+    <script src="js/lib/angular.min.js"></script>
+    <script src="js/lib/angular-sanitize.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script> angular.module('twitter').constant('username', '{{#user}}{{username}}{{/user}}'); </script>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+
+# IDE
+*.iml
+.idea/
+
+
+# NODE / DEVELOPMENT
+node_modules/
+build/
+*.log
+*.css
+_SpecRunner.html
+
+
+# SECURITY
+properties.json

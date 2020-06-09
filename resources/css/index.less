@@ -1,0 +1,86 @@
+
+html {
+   font: 10pt/1.5 "Lucida Grande", Arial, Sans-Serif;
+   color: #000;
+   background: #fafafa;
+}
+
+.timeline {
+   list-style-type: none;
+   padding: 0;
+}
+
+.tweet {
+
+   position: relative;
+   box-sizing: border-box;
+   padding: 0.5rem 0.5rem 0.5rem 4rem;
+   min-height: 4rem;
+
+   .profile-picture {
+      border: 1px solid black;
+      background-size: cover;
+      height: 3rem;
+      width: 3rem;
+      display: inline-block;
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+   }
+
+   .tweet-heading {
+      display: block;
+   }
+
+   .tweet-created-at {
+      font-size: 0.75rem;
+      color: #aaa;
+   }
+
+   .tweet-content {
+
+   }
+
+   &:hover {
+      background: #fff;
+      .tweet-created-at {
+         color: #000;
+      }
+   }
+}
+
+button, textarea {
+   display: inline-block;
+   outline: none;
+   background: #fff;
+   padding: .34375rem .8125rem .40625rem .71875rem;
+   font-size: .875rem;
+   font-weight: 700;
+   line-height: 1;
+   color: #55acee;
+   border: 1px solid #55acee;
+   border-radius: 4px;
+}
+
+textarea {
+   box-sizing: border-box;
+   width: 100%;
+
+   &:focus {
+      border-color: #333;
+   }
+}
+
+button:hover {
+   background: #55acee;
+   color: #fff;
+}
+
+a {
+   color: #2b7bb9;
+   text-decoration: none;
+
+   &:hover {
+      color: #3b94d9;
+   }
+}
